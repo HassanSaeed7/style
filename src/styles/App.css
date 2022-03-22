@@ -1,0 +1,412 @@
+body {
+  background: #f5f0ec;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-family: "Syncopate", sans-serif;
+  color: #464646;
+  text-transform: uppercase;
+}
+
+.header-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.header-menu {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  letter-spacing: 1px;
+  font-family: "Syncopate", sans-serif;
+  color: #626262;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.header-menu li {
+  margin: 10px 0;
+}
+
+.header-div {
+  position: relative;
+  white-space: wrap;
+  z-index: -1;
+}
+
+.header-div::after {
+  content: "MODERN DESIGN";
+  display: block;
+  height: 100vh;
+  font-size: 25rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  position: absolute;
+  top: 0;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  color: white;
+}
+
+.header-img {
+  width: 30%;
+  position: absolute;
+  right: 20%;
+  z-index: -1;
+}
+
+#header-text {
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  font-size: 25rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  z-index: 1;
+  color: black;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    otransform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes move {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    otransform: translateY(0%);
+    opacity: 1;
+  }
+}
+.main-container {
+  padding: 0 5vw;
+}
+
+section {
+  padding: 100px 0;
+}
+section .section-header {
+  margin-bottom: 50px;
+}
+
+.featured-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+.featured-section img {
+  -webkit-clip-path: inset(100% 0% 0% 0%);
+          clip-path: inset(100% 0% 0% 0%);
+  transition: -webkit-clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1), -webkit-clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.featured-section img.is-reveal {
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
+}
+.featured-section h6 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  -webkit-margin-before: 2.33em;
+          margin-block-start: 2.33em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+}
+
+.featured-row-layout,
+.featured-column-layout {
+  display: grid;
+  gap: 10px;
+}
+
+.featured-row-layout {
+  grid-template-rows: repeat(2, auto);
+}
+.featured-row-layout img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.featured-column-layout {
+  grid-template-columns: 100px auto;
+  align-items: flex-end;
+}
+.featured-column-layout img {
+  width: 100%;
+  height: 125vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.featured-column-layout h6 {
+  transform: translateX(100%) rotate(-90deg);
+  transform-origin: left bottom;
+  justify-self: end;
+}
+
+.section-header {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Syncopate", sans-serif;
+  color: #626262;
+  font-size: 1.2rem;
+}
+
+.about-section p {
+  font-size: 4rem;
+  line-height: 1.52;
+  -webkit-animation-name: about;
+          animation-name: about;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes about {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes about {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.gallery-wrap {
+  background: #d53f41;
+  margin-left: -5vw;
+  margin-right: -5vw;
+  position: relative;
+}
+
+.gallery-counter {
+  position: absolute;
+  top: 10%;
+  left: 100px;
+  z-index: 1;
+  mix-blend-mode: difference;
+  line-height: 16px;
+  color: black;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.divider {
+  content: "";
+  background-color: black;
+  width: 6.25vw;
+  margin: 7px 10px;
+  height: 1px;
+  display: inline-block;
+}
+
+.gallery {
+  height: 80vh;
+  padding: 10vh 0;
+  width: 400%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  will-change: transform;
+  color: black;
+}
+
+.gallery-item-info {
+  position: absolute;
+  bottom: 10%;
+  z-index: 1;
+  transform: translateX(-20%);
+}
+.gallery-item-info .gallery-info-title {
+  line-height: 6vw;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+  font-size: 6vw;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+  color: white;
+}
+.gallery-item-info .gallery-info-subtitle {
+  position: relative;
+  line-height: 6vw;
+  font-family: "Bodoni Moda";
+  color: transparent;
+  font-weight: 400;
+  font-size: 6vw;
+  -webkit-text-stroke: 5px white;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+}
+.gallery-item-info .gallery-info-category {
+  position: relative;
+  line-height: 24px;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 2vh;
+}
+.gallery-item-info .gallery-info-category a {
+  text-decoration: none;
+  border-bottom: 5px solid black;
+  font-weight: bold;
+  color: inherit;
+}
+
+.gallery-item-wrapper {
+  aspect-ratio: 16/9;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20vw 1fr 200px;
+  width: 100vw;
+}
+.gallery-item-wrapper.is-reveal .gallery-item-image {
+  transform: scale(1);
+  filter: none;
+}
+
+.gallery-item-image {
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform: scale(0.7);
+  transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+  filter: grayscale(100%) sepia(20%) brightness(80%);
+}
+
+.footer {
+  text-align: center;
+  padding-bottom: 200px;
+}
+
+.location {
+  font-size: 15vw;
+  text-transform: uppercase;
+  font-family: "Bodoni Moda", serif;
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
+}
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #191919;
+  color: #dbd8d6;
+}
+.loader-wrapper h1 {
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 600;
+}
+.loader-wrapper h2 {
+  font-size: 1.5vw;
+  text-transform: uppercase;
+  font-family: "Bodoni Moda", serif;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.absolute {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: black;
+  z-index: 1;
+}
+
+.char {
+  font-size: 40px;
+  height: 40px;
+  -webkit-animation: an 1s ease-out 1 both;
+          animation: an 1s ease-out 1 both;
+  display: inline-block;
+}
+
+@-webkit-keyframes an {
+  from {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes an {
+  from {
+    opacity: 0;
+    transform: perspective(500px) translate3d(-35px, -40px, -150px) rotate3d(1, -1, 0, 35deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(500px) translate3d(0, 0, 0);
+  }
+}/*# sourceMappingURL=App.css.map */
