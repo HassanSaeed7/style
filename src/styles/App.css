@@ -42,31 +42,33 @@ li {
   z-index: -1;
 }
 
-.header-div::after {
-  content: "MODERN DESIGN";
-  display: block;
-  height: 100vh;
+.header-img {
+  width: 30%;
+  position: absolute;
+  right: 20%;
+  z-index: -1;
+  filter: invert(100%);
+}
+
+.header-text {
+  -webkit-margin-before: 0em;
+          margin-block-start: 0em;
+  -webkit-margin-after: 0em;
+          margin-block-end: 0em;
   font-size: 25rem;
   text-transform: uppercase;
   text-align: center;
   font-family: "Bai Jamjuree", sans-serif;
   font-weight: 600;
-  position: absolute;
-  top: 0;
   -webkit-animation-name: move;
           animation-name: move;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
-  color: white;
-}
-
-.header-img {
-  width: 30%;
-  position: absolute;
-  right: 20%;
-  z-index: -1;
+  z-index: 1;
+  color: #d53f41;
+  mix-blend-mode: difference;
 }
 
 #header-text {
@@ -86,7 +88,8 @@ li {
   -webkit-animation-timing-function: ease-in-out;
           animation-timing-function: ease-in-out;
   z-index: 1;
-  color: black;
+  color: #d53f41;
+  mix-blend-mode: difference;
 }
 
 @-webkit-keyframes move {

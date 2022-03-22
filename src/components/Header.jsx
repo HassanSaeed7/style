@@ -1,5 +1,5 @@
 import React from 'react'
-import img from "../assets/9.jpg"
+import img from "../assets/10.jpg"
 
 
 
@@ -17,7 +17,7 @@ const Header = () => {
         
         
         </div>
-        <h1 id='header-text'>MODERN DESIGN</h1>
+        <h1 id='header-text'>MODERN</h1> <h1 className='header-text'>DESIGN</h1>
     </section>
   )
 }
